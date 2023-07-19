@@ -79,7 +79,7 @@ h1{
     justify-content: center;
     gap: 15px;
 }
-.fa-youtube{
+.youtube-icon{
     color: red;
     font-size: 1.4rem;
 }
@@ -155,17 +155,40 @@ main{
     padding-right: 150px;
     padding-left: 150px;
 }
+.games-card{
+    position: relative;
+}
 .games-card img{
     height: 80%;
     width: 90%;
     margin: 0 auto;
     cursor: pointer;
 }
-/* .games-card img:hover{
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.60) 0%, rgba(0, 0, 0, 0.60) 100%); border-radius: 16px; border: 2px #FF42A5 solid;
-    width: 100%; height: 100%; position: relative; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: inline-flex;
-    width: 48px; height: 48px; background: white
-} */
+
+.games-card .overlay{
+    position: absolute;
+    width: 90%;
+    height: 80%;
+    background: rgba(28, 27, 27, 0.616);
+    backdrop-filter: blur(2px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1rem;
+    gap: 1rem;
+    border: 2px solid #F948B2;
+    opacity: 0;
+    transition: opacity 0.5s;
+    color: #FFF;
+    font-size: 1rem;
+    margin-top: -307px;
+}
+.overlay:hover{
+    opacity: 1;
+    cursor: pointer;
+}
+
 /* Play Instantly Section Start */
 .play-instantly-container{
     margin-top: 100px;
@@ -222,8 +245,58 @@ main{
     border: 1px solid #F948B2;
 }
 
+/* footer Style */
+.footer-container{
+    background: #0B0223;
+    padding: 80px 100px;
+}
+.footer-title h3{
+    padding-left: 20px;
+    color: #FFF;
+    font-size: 3rem;
+    font-weight: 700;
+}
+.footer-title{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 50px;
+}
+.footer-about-container,
+.logo-container,
+.policy-container{
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+}
 
-
+.footer-about-container a{
+    color: #FFF;
+    font-size: 1.4rem;
+    font-weight: 600;
+    text-decoration: none;
+}
+.icon-color{
+    background-color: rgb(27, 21, 202); 
+    border-radius: 20%;
+}
+.logo-container{
+     padding-top: 60px;
+}
+.logo-container a{
+    color: #FFF;
+    font-size: 2.2rem;
+    font-weight: 600;
+    text-decoration: none;
+}
+.policy-container a,
+.footer-copyright-text p{
+    color: darkgray;
+    font-size: 1rem;
+    font-weight: 500;
+    text-decoration: none;
+    padding-top: 40px;
+    text-align: center;
+}
 
 
 
@@ -259,9 +332,11 @@ main{
         padding: 0;
         margin: 0;
     }
+    /* Online games and card Style Responsive */
     .games-card img{
         height: 100%;
         width: 100%;
+        position: relative;
     }
     .games-container{
         width: 80%;
@@ -270,6 +345,20 @@ main{
         padding-left: 40px;
         gap: 50px;
     }
+    
+    .games-card{
+        flex-direction: column;
+        gap: 40px;
+        margin-left: 70px;
+    }
+    .games-card .overlay{
+        position: absolute;
+        width: 100%;
+        height: 85%;
+        margin-top: -374px;
+    }
+
+    /* Instantly section Responsive Style */
     .instantly-img{
         margin-top: 0;
         margin-left: 30px;
@@ -278,7 +367,7 @@ main{
         margin-top: -150px;
         margin-left: -30px;
     }
-    
+    /* more games Responsive Style */
     .more-games-container{
         margin-top: 30px;
         padding: 50px 30px;
@@ -294,7 +383,38 @@ main{
         width: 25px;
         height: 25px;
     }
-     
+    /* footer responsive */
+    .footer-container{
+        padding: 40px;
+    }
+    .footer-title{
+        padding-bottom: 0px;
+    }
+    .footer-title>h3{
+        font-size: 2rem;
+    }
+    .footer-about-container,
+    .logo-container{
+        display: grid;
+        grid-template-columns: repeat(3, 3fr);
+    }
+    .policy-container{
+        display: grid;
+        grid-template-columns: repeat(2, 2fr);
+        text-align: center;
+    }
+    .policy-container a,
+    .footer-about-container a{
+        padding-top: 5px;
+    }
+    .footer-about-container,
+    .logo-container,
+    .policy-container{
+        margin-top: 30px;
+        gap: 15px;
+        padding-top: 10px;
+        text-align: center;
+    }
 }
 
 /* Responsive for Medium Device */
