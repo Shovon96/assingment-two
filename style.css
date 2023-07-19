@@ -166,6 +166,53 @@ main{
     width: 100%; height: 100%; position: relative; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: inline-flex;
     width: 48px; height: 48px; background: white
 } */
+/* Play Instantly Section Start */
+.play-instantly-container{
+    margin-top: 100px;
+    gap: 150px;
+}
+.instantly-title-container{
+    width: 40%;
+    text-align: right;
+    margin-top: 12%;
+}
+.instantly-title-container>p{
+    padding-left: 200px;
+}
+.instantly-img{
+    height: 500px;
+    width: 90%;
+}
+.img-66{
+    height: 250px;
+    position: relative;
+    margin-top: -200px;
+    margin-left: -100px;
+}
+
+/* More games style  */
+.more-game{
+    justify-content: center; 
+    gap: 80px;
+    margin-top: 50px;
+    cursor: pointer;
+}
+.more-game img{
+    height: 40px;
+    width: 40px;
+}
+.more-game>span{
+    padding:7px 15px;
+    font-weight: 600;
+
+}
+.more-game span:hover{
+    border-radius: 50px;
+    border: .5px solid #FF42A5;
+    color: #FF42A5;
+}
+
+
 
 
 
@@ -178,7 +225,9 @@ main{
     .list-items,
     .benner-main-container,
     .we-are-gamer-container,
-    .games-container
+    .games-container,
+    .play-instantly-container,
+    .more-game
     {
         flex-direction: column;
     }
@@ -193,7 +242,10 @@ main{
         text-align: center;
         margin-top: 40px;
     }
-    .gamer-title-container{
+    .gamer-title-container,
+    .instantly-title-container,
+    .instantly-title-container>p
+    {
         text-align: center;
         width: 100%;
         padding: 0;
@@ -210,6 +262,39 @@ main{
         padding-left: 40px;
         gap: 50px;
     }
+    .instantly-img{
+        margin-top: 0;
+        margin-left: 30px;
+    }
+    .img-66{
+        margin-top: -150px;
+        margin-left: -30px;
+    }
+    .more-game{
+        display: grid;
+        justify-content: start;
+        margin-top: 50px;
+        padding: 0;
+    }
+    .more-game-grid{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+    }
+    .more-game img{
+        height: 30px;
+        width: 30px;
+    }
+    .more-game>span{
+        padding:5px 10px;
+        font-weight: 600;
+    
+    }
+    .more-game span:hover{
+        border-radius: 50px;
+        border: .5px solid #FF42A5;
+        color: #FF42A5;
+    }
+     
 }
 
 /* Responsive for Medium Device */
@@ -217,7 +302,8 @@ main{
     .nav-container,
     .benner-main-container,
     .we-are-gamer-container,
-    .games-container
+    .games-container,
+    .play-instantly-container
     {
         flex-direction: column;
     }
@@ -232,7 +318,10 @@ main{
         text-align: center;
         margin-top: 40px;
     }
-    .gamer-title-container{
+    .gamer-title-container,
+    .instantly-title-container,
+    .instantly-title-container>p
+    {
         text-align: center;
         width: 100%;
         padding: 0;
@@ -246,5 +335,13 @@ main{
         padding-right: 60px;
         padding-left: 60px;
         gap: 40px;
+    }
+    .instantly-img{
+        margin-top: 0;
+        margin-left: 30px;
+    }
+    .img-66{
+        margin-top: -150px;
+        margin-left: -40px;
     }
 }
