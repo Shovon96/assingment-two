@@ -333,11 +333,7 @@ main{
         margin: 0;
     }
     /* Online games and card Style Responsive */
-    .games-card img{
-        height: 100%;
-        width: 100%;
-        position: relative;
-    }
+    
     .games-container{
         width: 80%;
         margin-top: 30px;
@@ -345,17 +341,22 @@ main{
         padding-left: 40px;
         gap: 50px;
     }
+    .games-card img{
+        height: 100%;
+        width: 100%;
+    }
     
     .games-card{
         flex-direction: column;
         gap: 40px;
+        position: relative;
         margin-left: 70px;
     }
     .games-card .overlay{
         position: absolute;
         width: 100%;
-        height: 85%;
-        margin-top: -374px;
+        height: 90%;
+        margin-top: -405px;
     }
 
     /* Instantly section Responsive Style */
